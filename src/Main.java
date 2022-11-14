@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Задания 1 и 2");
+        System.out.println("Задания 1");
 
         int currentYear = 2022;
 
