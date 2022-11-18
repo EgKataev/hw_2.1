@@ -1,7 +1,6 @@
 public class FlowerMain {
     public static void main(String[] args) {
 
-
         Flower rosa = new Flower(null, "Holland", 35.59);
         Flower chrysanthemum = new Flower(null, null, 15);
         chrysanthemum.lifeSpan = 5;
