@@ -1,3 +1,5 @@
+import transport.Car;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -26,6 +28,7 @@ public class Main {
 
         System.out.println("Задание 2");
 
+
         Car lada = new Car(
                 "Lada",
                 "Granta",
@@ -33,12 +36,7 @@ public class Main {
                 "Жёлтый",
                 2015,
                 "Россия");
-        System.out.println("Марка авто- " + lada.brand +
-                ", модель- " + lada.model +
-                ", объем двигателя в литрах- " + lada.engineVolume +
-                ", цвет кузова- " + lada.color +
-                ", год производства- " + lada.productionYear +
-                ", страна производства- " + lada.productionCountry);
+
 
         Car audi = new Car(
                 "Audi",
@@ -47,12 +45,8 @@ public class Main {
                 "Чёрный",
                 2020,
                 "Германия");
-        System.out.println("Марка авто- " + audi.brand +
-                ", модель- " + audi.model +
-                ", объем двигателя в литрах- " + audi.engineVolume +
-                ", цвет кузова- " + audi.color +
-                ", год производства- " + audi.productionYear +
-                ", страна производства- " + audi.productionCountry);
+        audi.setTransmission("АКПП");
+
 
         Car bmw = new Car(
                 "BMW",
@@ -61,12 +55,8 @@ public class Main {
                 "Чёрный",
                 2021,
                 "Германия");
-        System.out.println("Марка авто- " + bmw.brand +
-                ", модель- " + bmw.model +
-                ", объем двигателя в литрах- " + bmw.engineVolume +
-                ", цвет кузова- " + bmw.color +
-                ", год производства- " + bmw.productionYear +
-                ", страна производства- " + bmw.productionCountry);
+        bmw.setSummerTyres(false);
+
 
         Car kia = new Car(
                 "KIA",
@@ -75,12 +65,7 @@ public class Main {
                 "Красный",
                 2018,
                 "Южная Корея");
-        System.out.println("Марка авто- " + kia.brand +
-                ", модель- " + kia.model +
-                ", объем двигателя в литрах- " + kia.engineVolume +
-                ", цвет кузова- " + kia.color +
-                ", год производства- " + kia.productionYear +
-                ", страна производства- " + kia.productionCountry);
+
 
         Car hyundai = new Car(
                 "Hyundai",
@@ -89,15 +74,30 @@ public class Main {
                 "Оранжевый",
                 2016,
                 "Южная Корея");
-        System.out.println("Марка авто- " + hyundai.brand +
-                ", модель- " + hyundai.model +
-                ", объем двигателя в литрах- " + hyundai.engineVolume +
-                ", цвет кузова- " + hyundai.color +
-                ", год производства- " + hyundai.productionYear +
-                ", страна производства- " + hyundai.productionCountry);
+
+        printInfo(lada);
+        printInfo(audi);
+        printInfo(bmw);
+        printInfo(kia);
+        printInfo(hyundai);
     }
+
 
     private static void printInfo(Human human) {
         System.out.println("Привет! Меня зовут " + human.name + ". Я из города " + human.getCity() + ". Я родился в " + human.getYearOfBirth() + " году. Я работаю на должности: " + human.jobTitle + ". Будем знакомы!");
+    }
+
+    private static void printInfo(Car car) {
+        System.out.println("Марка авто- " + car.getBrand() +
+                ", модель- " + car.getModel() +
+                ", объем двигателя в литрах- " + car.getEngineVolume() +
+                ", цвет кузова- " + car.getColor() +
+                ", год производства- " + car.getProductionYear() +
+                ", страна производства- " + car.getProductionCountry() +
+                ", коробка передач- " + car.getTransmission() +
+                ", тип кузова- " + car.getBodyType() +
+                ", регистрационный номер- " + car.getRegNumber() +
+                ", количество мест- " + car.getPlaces() +
+                ", " + (car.isSummerTyres() ? "летняя": "зимняя") + " резина");
     }
 }
