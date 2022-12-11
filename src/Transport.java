@@ -1,2 +1,2 @@
-public class Transport {
+public class Transport  {
 }
