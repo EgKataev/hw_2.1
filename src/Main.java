@@ -1,9 +1,9 @@
+import transport.Bus;
 import transport.Car;
 
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println("Задания 1");
 
         int currentYear = 2022;
 
@@ -25,8 +25,6 @@ public class Main {
 
 
         System.out.println();
-
-        System.out.println("Задание 2");
 
 
         Car lada = new Car(
@@ -80,6 +78,18 @@ public class Main {
         printInfo(bmw);
         printInfo(kia);
         printInfo(hyundai);
+
+
+        System.out.println();
+
+
+        Bus ikarus = new Bus("Икарус", "1", 2001, "Латвия", "чёрный", 65, 57.49);
+        Bus paz = new Bus("ПАЗ", "3303", 2000, "Россия", "белый", 60, 22.60);
+        Bus liaz = new Bus("ЛИАЗ", "2210", 2000, "Россия", "жёлтый", 70, 31.70);
+        System.out.println(ikarus);
+        System.out.println(paz);
+        System.out.println(liaz);
+        ikarus.refill();
     }
 
 
@@ -103,7 +113,9 @@ public class Main {
                 ", " + (car.getKey().isRemoteRunEngine() ? "удалённый запуск" : "обычный запуск") +
                 ", номер страховки- " + car.getInsurance().getNumber() +
                 ", стоимость страховки- " + car.getInsurance().getCost() +
-                ", срок действия страховки- " + car.getInsurance().getExpireData()
-        );
+                ", срок действия страховки- " + car.getInsurance().getExpireData());
+        car.refill();
     }
+
+
 }

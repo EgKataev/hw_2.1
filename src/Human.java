@@ -5,11 +5,11 @@ public class Human {
     public String jobTitle;
 
     public Human(int yearOfBirth, String name, String city, String jobTitle) {
-//        if (yearOfBirth < 0) {
-//            this.yearOfBirth = 0;
-//        } else {
-//            this.yearOfBirth = yearOfBirth;
-//        }
+        if (yearOfBirth < 0) {
+            this.yearOfBirth = 0;
+        } else {
+            this.yearOfBirth = yearOfBirth;
+        }
 
 
         if (name == null) {
@@ -18,11 +18,11 @@ public class Human {
             this.name = name;
         }
 
-//        if (city == null) {
-//            this.city = "Информация не указана";
-//        } else {
-//            this.city = city;
-//        }
+        if (city == null) {
+            this.city = "Информация не указана";
+        } else {
+            this.city = city;
+        }
 
         if (jobTitle == null) {
             this.jobTitle = "Информация не указана";
